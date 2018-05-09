@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>add-techno</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>Ajouter une techno</h3>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>nom</ion-label>
+      <ion-input type="text" [(ngModel)]="technology.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Choix catégories</ion-label>
+      <ion-select [(ngModel)]="technology.category">
+        <ion-option *ngFor="let category of categories">{{category}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button (click)="addTechnology()">Ajouter technologie</button>
+
+</ion-content>
